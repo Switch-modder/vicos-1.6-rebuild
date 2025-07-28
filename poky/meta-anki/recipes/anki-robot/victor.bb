@@ -187,7 +187,7 @@ do_compile () {
       elif [[ "${ANKI_RESOURCE_ESCAPEPOD}" == "1" ]]; then
         run_victor ./project/victor/scripts/victor_build_escape_pod_shipping.sh
       else
-        run_victor ./project/victor/scripts/victor_build_shipping.sh
+        run_victor ./wire/build-oe.sh
       fi
     else
       if [[ "${OSKR}" == "1" ]]; then
@@ -195,7 +195,7 @@ do_compile () {
       elif [[ "${ANKI_RESOURCE_ESCAPEPOD}" == "1" ]]; then
         run_victor ./project/victor/scripts/victor_build_escape_pod_release.sh
       else
-        run_victor ./project/victor/scripts/victor_build_release.sh
+        run_victor ./wire/build-oe.sh
       fi
     fi
   fi

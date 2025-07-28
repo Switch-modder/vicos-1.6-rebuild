@@ -24,6 +24,8 @@ if [[ -f anki-deps/.done ]]; then
 	exit 0
 fi
 
+
+
 rm -rf anki-deps
 
 mkdir -p anki-deps/vicos-sdk/dist/1.1.0-r04
