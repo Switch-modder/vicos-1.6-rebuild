@@ -37,9 +37,9 @@ gen_buildprop() {
    OS_VERSION=`cat ${IMAGE_ROOTFS}/etc/os-version`
    RELEASE_VERSION=`cat ${IMAGE_ROOTFS}/etc/version`
    
-   # read from /anki/etc/version to prepend build.id
-   VICTOR_BUILD_VERSION=`cat ${IMAGE_ROOTFS}/anki/etc/version`
-   VICTOR_BUILD_REV=`cat ${IMAGE_ROOTFS}/anki/etc/revision`
+   # read from victor-version in root to prepend build.id
+   VICTOR_BUILD_VERSION=`cat ${IMAGE_ROOTFS}/etc/os-version`
+   VICTOR_BUILD_REV=1.6-rebuilt
    VICTOR_REV_TAG=""
    if [ ! -z "${VICTOR_BUILD_REV}" ]; then
       VICTOR_REV_TAG="-${VICTOR_BUILD_REV}"
