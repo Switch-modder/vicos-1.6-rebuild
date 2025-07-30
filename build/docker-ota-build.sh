@@ -68,8 +68,6 @@ if [[ ! -d build/cache/ccache ]]; then
     mkdir -p build/cache/ccache
 fi
 
-export BUILD_INCREMENT=$2
-
 function check_sign_prod() {
     if openssl rsa -in ota/qtipri.encrypted.key -passin pass:"$BOOT_SIGNING_PASSWORD" -noout 2>/dev/null; then
         echo "Prod boot image key password confirmed to be correct!"

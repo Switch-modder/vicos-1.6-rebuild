@@ -1,11 +1,11 @@
-FROM ubuntu:bionic
+FROM ubuntu:16.04
 
 ARG UID
 ARG GID
 
 RUN apt-get update && apt-get install -y sudo software-properties-common
 RUN apt-get install -y \
-    build-essential chrpath cpio cmake debianutils diffstat file gawk gcc git iputils-ping libacl1 liblz4-tool locales python3 python3-git python3-jinja2 python3-pexpect python3-subunit socat texinfo unzip wget xz-utils zstd
+    build-essential chrpath cpio debianutils diffstat file gawk gcc git iputils-ping libacl1 liblz4-tool locales python3 python3-git python3-jinja2 python3-pexpect python3-subunit socat texinfo unzip wget xz-utils zstd
 RUN apt-get install -y \
     git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev libxml-simple-perl libc6-dev libgl1-mesa-dev tofrodos python-markdown libxml2-utils xsltproc genisoimage
 RUN apt-get install -y \

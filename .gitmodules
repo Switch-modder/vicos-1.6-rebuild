@@ -7,6 +7,3 @@
 [submodule "anki/victor"]
 	path = anki/victor
 	url = https://github.com/Switch-modder/victor-1.6-rebuild
-[submodule "build/dvcbs-reloaded"]
-	path = build/dvcbs-reloaded
-	url = https://github.com/Switch-modder/dvcbs-reloaded
