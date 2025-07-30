@@ -68,7 +68,7 @@ if [[ ! -d build/cache/ccache ]]; then
     mkdir -p build/cache/ccache
 fi
 
-echo 1.6.1.$INCREMENT > victor-version
+export BUILD_INCREMENT=$2
 
 function check_sign_prod() {
     if openssl rsa -in ota/qtipri.encrypted.key -passin pass:"$BOOT_SIGNING_PASSWORD" -noout 2>/dev/null; then
