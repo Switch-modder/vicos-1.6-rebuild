@@ -3,8 +3,8 @@
 ##  bad. Anything that we can limp along without should be put somewhere else so that this script exits
 ##  with status 0 and the system init process can continue.
 
-# @nathan-anki  - to stop overheating, limit CPU to 533MHz, RAM to 400MHz
-echo 533333 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+# @nathan-anki  - to stop overheating, limit CPU to 800MHz, RAM to 400MHz
+echo 800000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 echo disabled > /sys/kernel/debug/msm_otg/bus_voting  # This prevents USB from pinning RAM to 400MHz
 echo 0 > /sys/kernel/debug/msm-bus-dbg/shell-client/update_request
 echo 1 > /sys/kernel/debug/msm-bus-dbg/shell-client/mas
