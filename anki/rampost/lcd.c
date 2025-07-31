@@ -282,8 +282,8 @@ static void _led_set_brightness(const int brightness, const char* led)
 void lcd_set_brightness(int brightness)
 {
   int l;
-  brightness = MIN(brightness, 10);
-  brightness = MAX(brightness, 0);
+  // brightness = MIN(brightness, 10);
+  // brightness = MAX(brightness, 0);
   for (l = 0; l < 3; ++l) {
     _led_set_brightness(brightness, BACKLIGHT_DEVICES[l]);
   }

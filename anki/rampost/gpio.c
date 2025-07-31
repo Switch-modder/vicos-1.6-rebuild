@@ -40,10 +40,10 @@ int gpio_get_base_offset()
     // android/3.10:  /sys/devices/soc.0/1000000.pinctrl/gpio/gpiochip911/base -> 911
 
     // Assume we are on an OE-linux system
-    int fd = open("/sys/devices/soc/1000000.pinctrl/gpio/gpiochip0/base", O_RDONLY);
+    int fd = open("/sys/devices/platform/soc/1000000.pinctrl/gpio/gpiochip0/base", O_RDONLY);
     if (fd < 0) {
-      // Fallback to Android
-      fd = open("/sys/devices/soc.0/1000000.pinctrl/gpio/gpiochip911/base", O_RDONLY);
+      // Fallback to OE-linux 3.18 kernel
+      fd = open("/sys/devices/soc/1000000.pinctrl/gpio/gpiochip0/base", O_RDONLY);
     }
 
     if (fd < 0) {
