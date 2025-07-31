@@ -4,7 +4,7 @@ if [[ ${NO_TTY} == "1" ]]; then
 fi
 
 docker build --build-arg UID=$(id -u $USER) --build-arg GID=$(id -g $USER) -t victor-builder build/
-docker run ${BUILD_ARGS_TERM} \
+docker run ${BUILD_ARGS_TERM} --rm \
     -v "$(pwd):/home/build/vicos-oelinux" \
     -v "$(pwd)/anki-deps:/home/build/.anki" \
     -v "$(pwd)/build/cache/ccache:/home/build/.ccache" \

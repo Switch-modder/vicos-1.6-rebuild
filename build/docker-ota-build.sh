@@ -144,7 +144,7 @@ docker run ${BUILD_ARGS_TERM} \
 	-v "$(pwd):/home/build/vicos-oelinux" \
 	victor-builder bash -c "cd ~/vicos-oelinux && ./build/deps.sh"
 
-docker run ${BUILD_ARGS_TERM} \
+docker run ${BUILD_ARGS_TERM} --rm \
     -v "$(pwd):/home/build/vicos-oelinux" \
     -v "$(pwd)/anki-deps:/home/build/.anki" \
     -v "$(pwd)/build/cache/ccache:/home/build/.ccache" \
